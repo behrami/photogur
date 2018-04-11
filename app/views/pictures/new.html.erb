@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> Add a picture</h1>
+
+    <%= form_for (@picture) do |f| %>
+    <p>
+      <%= f.label :artist %><br>
+      <%= f.text_field :artist %><br>
+    </p>
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %><br>
+    </p>
+    <p>
+      <%= f.label :url %><br>
+      <%= f.text_field :url %><br>
+    </p>
+    <p>
+      <%= f.submit "Save" %>
+    </p>
+
+    <%end%>
+  </body>
+</html>
