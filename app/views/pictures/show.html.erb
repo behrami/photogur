@@ -6,8 +6,10 @@
   </head>
   <body>
 
-    <p><%= @picture.title%>, <%= @picture.artist %></p>
-    <img src = "<%=@picture.url %>">
-    
+    <%= link_to("Back to Pictures", "/pictures") %>
+
+    <p><%= @picture.title %>, <%= @picture.artist %></p>
+    <%= image_tag(@picture.url) %>
+
   </body>
 </html>

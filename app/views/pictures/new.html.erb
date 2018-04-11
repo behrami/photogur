@@ -7,6 +7,8 @@
   <body>
     <h1> Add a picture</h1>
 
+    <%= link_to("Back to Pictures", "/pictures") %>
+
     <%= form_for (@picture) do |f| %>
     <p>
       <%= f.label :artist %><br>
