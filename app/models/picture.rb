@@ -1,11 +1,9 @@
 class Picture < ApplicationRecord
+
+  belongs_to :user
+  
   validates :title, presence: true
-
-  validates :artist, presence: true
-  validates :artist, length: {minimum: 3}
-  validates :artist, length: {maximum: 20}
-
-  validates :url, presence: true
-  validates :url, uniqueness: true
+  validates :artist, presence: true, length: {minimum: 3}, length: {maximum: 20}
+  validates :url, presence: true, uniqueness: true
 
 end
