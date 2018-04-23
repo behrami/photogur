@@ -1,6 +1,8 @@
 class PicturesController < ApplicationController
 
   before_action :ensure_logged_in, except: [:show, :index]
+  before_action :ensure_user_owns_picture, except: [:show, :index]
+  before_action :load_picture, only: [:show, :edit, :update, :destroy]
 
   def index
     @pictures= Picture.all
@@ -28,6 +30,10 @@ class PicturesController < ApplicationController
       #otherwise render new.tml.erb
       render :new
     end
+  end
+
+  def load_picture
+    @picture = Picture.find(params[:id])
   end
 
 end
