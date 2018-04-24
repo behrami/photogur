@@ -6,7 +6,7 @@
   </head>
   <body>
 
-    <%= link_to("Back to Pictures", "/pictures") %>
+    <%= link_to("Back to Pictures", "/pictures") %> | <%= link_to("Edit", "/pictures/#{@picture.id}/edit") %>
 
     <p><%= @picture.title %>, <%= @picture.artist %></p>
     <%= image_tag(@picture.url) %>
