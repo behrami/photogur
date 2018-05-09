@@ -1,3 +1,35 @@
 // Place all the styles related to the pictures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body{
+  background-color: black;
+  color: white;
+}
+
+.allPictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+
+  .picture {
+    text-align: center;
+
+    a{
+      img{
+        object-fit: contain;
+
+        // border: 1px solid #fff; /* white border */
+        border-radius: 4px;  /* Rounded border */
+        padding: 5px; /* Some padding */
+        width: 450px; /* Set a small width */
+        height: 450px;
+      }
+
+      img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+      }
+    }
+  }
+}
