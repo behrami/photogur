@@ -6,6 +6,63 @@
 body{
   background-color: black;
   color: white;
+  font-family: 'Quicksand';
+  font-size: 20px;
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: 25% 1fr 25%;
+  padding: 0% 1% 1% 1%;
+
+  .newPicture{
+    text-align: center;
+    vertical-align: top;
+
+    img{
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .title{
+    font-size: 60px;
+    font-weight: 450;
+    text-align: center;
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .right{
+    text-align: right;
+    .login{
+      margin: 5px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .logout{
+      margin: 5px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+    .signup{
+      margin: 5px;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+
+  }
+
 }
 
 .allPictures {
@@ -19,8 +76,6 @@ body{
     a{
       img{
         object-fit: contain;
-
-        // border: 1px solid #fff; /* white border */
         border-radius: 4px;  /* Rounded border */
         padding: 5px; /* Some padding */
         width: 450px; /* Set a small width */
@@ -31,5 +86,27 @@ body{
         box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
       }
     }
+
+  }
+}
+
+.showImage{
+  display: grid;
+  grid-template-columns: minmax(450px, 1fr);
+
+  p{
+    object-fit: contain;
+    text-align: center;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .loggedin{
+    display: none;
   }
 }

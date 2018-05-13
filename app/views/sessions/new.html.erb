@@ -2,12 +2,18 @@
 
 <%= form_for :session, url: sessions_path do |f| %>
 
-    <%= f.label :email %>
+    <p>
+    <%= f.label :email %><br>
     <%= f.email_field :email %>
+    </p>
 
-    <%= f.label :password %>
+    <p>
+    <%= f.label :password %><br>
     <%= f.password_field :password %>
+    </p>
 
-  <%= f.submit "Login" %>
+    <p>
+    <%= f.submit "Login" %>
+    </p>
 
 <% end %>

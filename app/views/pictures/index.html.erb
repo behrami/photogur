@@ -2,20 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
   </head>
   <body>
-
-    <div class='title'><h1>Pictures</h1></div>
-
-    <div class= 'newPicture'><%= link_to("New Picture", "/pictures/new") %></div>
 
     <div class = 'allPictures'>
       <% @pictures.each do |picture| %>
         <div class = 'picture'>
           <%= link_to(image_tag(picture.url), "/pictures/#{picture.id}") %>
-          <p><%= picture.title %>, <%= picture.artist %></p>
+          <p><%= picture.title %></br>
+          <%= picture.artist %></p>
         </div>
       <% end %>
     </div>
